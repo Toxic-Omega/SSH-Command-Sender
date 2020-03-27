@@ -2,7 +2,7 @@ echo off
 color c
 title SSH-Command-Sender
 :ssh-hub
-mode con: cols=75 lines=27
+mode con: cols=39 lines=18
 cls
 echo  ____    ____    __  __     
 echo /\  _`\ /\  _`\ /\ \/\ \ V9.5   
@@ -55,8 +55,11 @@ set /p "User=[~] User: "
 set /p "Host=[~] Host: "
 set /p "Port=[~] Port: "
 ssh %User%@%Host% -p  %Port%
+mode con: cols=100 lines=29
 cls
+goto ssh-hub
 :ssh_voice
+mode con: cols=65 lines=18
 cls
 echo When You Type Voice Message Please Replace Spaces With "-" !
 echo.
@@ -65,6 +68,7 @@ set /p "Host=[~] Host: "
 set /p "Port=[~] Port: "
 set /p "Msg=[~] Voice Msg: "
 ssh %User%@%Host% -p %Port% espeak "%Msg%"
+mode con: cols=39 lines=18
 cls
 echo  ____    ____    __  __     
 echo /\  _`\ /\  _`\ /\ \/\ \ V9.5   
