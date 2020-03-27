@@ -61,6 +61,7 @@ goto ssh-hub
 :ssh_voice
 mode con: cols=65 lines=18
 cls
+echo You Will Also Need To Execute This Command To Do This "sudo apt-get install espeak"
 echo When You Type Voice Message Please Replace Spaces With "-" !
 echo.
 set /p "User=[~] User: "
